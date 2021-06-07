@@ -1,51 +1,48 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<h1>
-  Welcome to {{ title }}!
-</h1>
+<div class="app-wrapper">
+  <!--The content below is only a placeholder and can be replaced.-->
+ <div class="header-container">
+   <h1>
+     Welcome to {{ title }}!
+   </h1>
 
-<nav>
-  <a [routerLink]="['home']"
-     routerLinkActive="active">home
-  </a>
-  |
+   <nav>
+     <a [routerLink]="['home']"
+        routerLinkActive="active">home
+     </a>
+     |
 
-  <a [routerLink]="['user']"
-     routerLinkActive="active">user
-  </a>
-  |
+     <a [routerLink]="['user']"
+        routerLinkActive="active">user
+     </a>
+     |
 
-  <a [routerLink]="['contact']"
-     routerLinkActive="active">contact
-  </a>
-  |
+     <a [routerLink]="['contact']"
+        routerLinkActive="active">contact
+     </a>
+     |
 
-  <a [routerLink]="['dash']"
-     routerLinkActive="active">dash
-  </a>
+     <a [routerLink]="['dash']"
+        routerLinkActive="active">dash
+     </a>
 
-</nav>
+   </nav>
+ </div>
 
-<router-outlet></router-outlet>
-
-<footer>
-  <a href="https://www.linkedin.com/learning/instructors/saban-unlu" target="_blank">
-    <img src="../assets/img/linkedin-logo.png" alt="linkedin">
-  </a>
-  <a href="https://www.nettrek.de/" target="_blank">
-    <img src="../assets/img/logo.png" alt="netTrek">
-  </a>
-  <a href="https://github.com/netTrek/LinkedIn_Angular_CRUD" target="_blank">
-    <img src="../assets/img/github.png" alt="github">
-  </a>
-</footer>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
 
 
-<div class="modal" [style.display]="showModal?'block':'none'">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close" (click)="closeModal()">&times;</span>
-    <router-outlet name="modal"></router-outlet>
+
+  <div class="modal" [style.display]="showModal?'block':'none'">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" (click)="closeModal()">&times;</span>
+      <router-outlet name="modal"></router-outlet>
+    </div>
+
   </div>
 
 </div>

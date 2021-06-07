@@ -1,3 +1,8 @@
+form{
+  display: flex;
+  flex-direction: column;
+}
+
 span {
   font-size: smaller;
   width: 22%;
@@ -15,13 +20,24 @@ span {
 }
 
 input {
-  width: 70%;
+
+  margin: 5px;
+  padding: 20px 10px;
   &.ng-invalid.ng-dirty.ng-touched {
     color: red;
     border: red solid 1px;
   }
 }
 
+.buttons{
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+}
 button {
-  margin-left: 22%;
+  padding: 15px 20px;
+  border: 0;
+  background-color: #000000;
+  color: #fff;
+  margin: 10px;
 }

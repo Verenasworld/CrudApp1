@@ -1,9 +1,47 @@
+*{
+  margin-top: 0;
+}
+.app-wrapper{
+  text-align: center;
+  height: 100%;
+
+}
+
+.header-container{
+  background-color: aliceblue;
+  padding: 10px 0;
+}
+
+nav, a{
+  text-decoration: none;
+  color:black;
+}
 :host {
-  display: block;
-  max-height: calc(100vh - 36px);
+  height: 100%;
   overflow-y: auto;
 }
 
+
+h1{
+  justify-content: center;
+}
+
+button {
+  padding: 15px 20px;
+  border: 0;
+  background-color: #000000;
+  color: #fff;
+  margin: 10px;
+}
+
+.content{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+
+}
 footer {
   position: fixed;
   top: calc(100vh - 30px);

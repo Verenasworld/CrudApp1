@@ -2,12 +2,19 @@
 <div [innerHTML]="htmlString"></div>
 <img *ngIf="imgSrc" [src]="imgSrc" alt="logo">
 
-<input type="file" (change)="handleUpload ($event)">
 
-<h1>home</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus blanditiis distinctio eveniet nihil quas! Ad
-  blanditiis, commodi cumque eos id inventore maiores modi perferendis praesentium quidem quisquam vitae voluptatem
-  voluptates.</p>
+<div class="home-content">
+
+  <h1>CRUD APP with HTTP-CLIENT </h1>
+  <p>
+    <a href="https://www.linkedin.com/learning/angular-crud-anwendungen-mit-dem-http-client/willkommen-zu-dem-video-training-angular-crud-anwendungen-mit-dem-http-client">TUTORIAL >> </a><br>
+    I'm learning:
+    <br>-Basics of client-server communication
+    <br>- Prepare the CRUD Project
+    <br>-Implement the CRUD process
+    <br>-Handle errors in the client-server communication
+    <br> - Intercept requests and responses </p>
+</div>
 
 
 <button *ngIf="!cookieAccepted" (click)="acceptCookie()">accept cookie</button>

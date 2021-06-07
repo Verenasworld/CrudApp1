@@ -1,8 +1,28 @@
-form {
-  display: flex;
-  flex-direction: column;
+
+.flex-content{
+  display: inline-flex;
+  flex-direction: row;
+  align-content: center;
+  text-align: center;
+}
+
+input{
+  margin: 5px;
+  padding: 20px 10px;
 }
 
 input.ng-invalid.ng-dirty.ng-touched {
   color: red;
+}
+div.form-container{
+
+  align-content: flex-end;
+  text-align: center;
+}
+
+.item{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: baseline;
 }

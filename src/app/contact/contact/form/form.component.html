@@ -4,8 +4,10 @@
       (reset)="reset()"
 >
 
-  <span ngModelGroup="personalInfo">
-    <input type="text"
+  <div class="flex-content">
+    <span ngModelGroup="personalInfo">
+    <input  type="text"
+            class="item"
            #username="ngModel"
            ngModel
            (ngModelChange)="usernameChanged( $event )"
@@ -15,15 +17,18 @@
            required
            pattern="[a-z]*"
            minlength="3"
-           placeholder="name"> {{ username.valid }}
-    <div *ngIf="username.touched && username.dirty">
-      <div *ngIf="username.errors?.required">Dieses Feld muss befüllt werden</div>
-      <div *ngIf="username.errors?.minlength">
+           placeholder="name">
+    <span *ngIf="username.touched && username.dirty">
+      <span *ngIf="username.errors?.required">
+        Dieses Feld muss befüllt werden
+      </span>
+      <span *ngIf="username.errors?.minlength">
         Es müssen min. 3 Zeichen eingegeben sind nur {{username.errors.minlength.actualLength}}
-      </div>
-    </div>
+      </span>
+    </span>
     <br>
     <input type="email"
+           class="item"
            #email="ngModel"
            ngModel
            name="email"
@@ -31,21 +36,31 @@
            required
            email
            inUniqueMail
-           placeholder="email"> {{email.errors | json}}
-  </span>
-  <br>
-  <input type="text" name="serial" ngModel="hkasdhkjshkjashd" #serial="ngModel" inSerial>
-  <textarea
-    #message="ngModel"
-    ngModel
-    name="msg"
-    id="msg"
-    cols="30"
-    rows="5"
-    placeholder="Nachricht"></textarea>
+           placeholder="email"
+    >
 
-  <button type="submit" [disabled]="myForm.invalid">senden</button>
-  <button type="reset" [disabled]="myForm.pristine">reset</button>
+      <input
+        class="item"
+        type="text"
+        name="serial"
+        ngModel="Subject"
+        #serial="ngModel"
+        inSerial>
+     <textarea
+       class="item"
+       #message="ngModel"
+       ngModel
+       name="msg"
+       id="msg"
+       cols="30"
+       rows="5"
+       placeholder="Nachricht"></textarea>
+
+    </span>
+    <button  class="item" type="submit" [disabled]="myForm.invalid">senden</button>
+    <button  class="item" type="reset" [disabled]="myForm.pristine">reset</button>
+  </div>
+
 
 </form>
 

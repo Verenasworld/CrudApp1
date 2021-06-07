@@ -8,7 +8,7 @@ import { filter, map } from 'rxjs/operators';
   styleUrls  : [ './app.component.scss' ]
 } )
 export class AppComponent {
-  title     = 'LinkedIn';
+  title     = 'My First CRUD Application';
   showModal = false;
 
   constructor( private router: Router ) {
