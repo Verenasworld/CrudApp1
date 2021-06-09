@@ -20,8 +20,19 @@
     </span>
     <br>
 
+
+  <input class="w3-input w3-border w3-animate-input" type="email" style="width:50%" placeholder="test@test.com"
+         [formControl]="email">
+
+  <span class="error" *ngIf="email.touched && email.dirty && email.errors">
+      <span *ngIf="email.errors?.required">Bitte Email eintrage</span>
+    <span *ngIf="email.errors?.minlength">Es müssen min. 2 Zeichen eingegeben sein</span>
+
+    </span>
+  <br>
+
 <input class="w3-input w3-border w3-animate-input" type="number" style="width:30%"
-           [formControl]="age" [min]="1" [max]="100"
+           [formControl]="age" [min]="5" [max]="100"
            placeholder="Age">
     <span class="error" *ngIf="age.touched && age.dirty && age.errors">
       <span *ngIf="age.errors?.required">Bitte Vornamen eintrage</span>
@@ -29,15 +40,7 @@
     </span>
     <br>
 
-  <input class="w3-input w3-border w3-animate-input" type="email" style="width:30%" placeholder="test@test.com"
-         [formControl]="email" [min]="1" [max]="100"
-         >
 
-  <span class="error" *ngIf="email.touched && email.dirty && email.errors">
-      <span *ngIf="email.errors?.required">Bitte email adresse eintragen </span>
-
-    </span>
-  <br>
 <div class="buttons">
 
   <button type="reset"

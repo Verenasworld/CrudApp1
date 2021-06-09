@@ -38,7 +38,7 @@ export class UserFormComponent implements OnInit, OnDestroy {
                      if ( data.hasOwnProperty ( 'user' ) ) {
                        this.user = data.user as User;
                      } else {
-                       this.user = { firstname: '', lastname: '', age: 1 };
+                       this.user = { firstname: '', lastname: '', age: null , email: ''};
                      }
                      this.prepairForm ();
                    } );
@@ -62,7 +62,7 @@ export class UserFormComponent implements OnInit, OnDestroy {
       ],
       age      : [ this.user.age,
                    [ Validators.required,
-                     Validators.min ( 1 ),
+                     Validators.min ( 5 ),
                      Validators.max ( 100 )
                    ]
       ],
