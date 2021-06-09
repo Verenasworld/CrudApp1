@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { UserListService } from './user-list.service';
 import { User } from '../../user';
 

@@ -6,7 +6,23 @@
   line-height: 1.5;
 }
  a{
+   display: inline-flex;
   text-decoration: none;
   color: #225982;
   font-size: 25px;
+   &.grow{
+    transition: all .2s ease-in;
+    &:hover{
+      transform: scale(1.2);
+      color: #009fe3;
+    }
+   }
+ }
+
+.button-hover{
+  transition: all .2s ease-in-out;
+  &:hover{
+    transform: scale(1.2);
+  }
 }
+

@@ -1,13 +1,13 @@
 
-<div [innerHTML]="htmlString"></div>
-<img *ngIf="imgSrc" [src]="imgSrc" alt="logo">
+
 
 
 <div class="home-content">
 
   <h1>CRUD APP with HTTP-CLIENT </h1>
+  <a class="grow" href="https://www.linkedin.com/learning/angular-crud-anwendungen-mit-dem-http-client/willkommen-zu-dem-video-training-angular-crud-anwendungen-mit-dem-http-client">TUTORIAL>> </a>
   <p>
-    <a href="https://www.linkedin.com/learning/angular-crud-anwendungen-mit-dem-http-client/willkommen-zu-dem-video-training-angular-crud-anwendungen-mit-dem-http-client">TUTORIAL >> </a><br>
+   <br>
     I'm learning:
     <br>-Basics of client-server communication
     <br>- Prepare the CRUD Project
@@ -19,7 +19,7 @@
 
 <button *ngIf="!cookieAccepted" (click)="acceptCookie()">accept cookie</button>
 
-<button (click)="openModal()">open modal a</button>
+<button class="button-hover" (click)="openModal()">open modal a</button>
 
 <!--
 <a [routerLink]="[ { outlets: { modal: ['modalA'] } } ]">open Modal</a>
