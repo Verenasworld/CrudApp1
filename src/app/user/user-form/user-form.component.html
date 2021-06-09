@@ -4,7 +4,7 @@
 
    <input class="w3-input w3-border w3-animate-input" type="text" style="width:50%"
            [formControl]="firstname"
-           placeholder="Vorname">
+           placeholder="Name">
     <span class="error" *ngIf="firstname.touched && firstname.dirty && firstname.errors">
       <span *ngIf="firstname.errors?.required">Bitte Vornamen eintrage</span>
       <span *ngIf="firstname.errors?.minlength">Es müssen min. 2 Zeichen eingegeben sein</span>
@@ -13,7 +13,7 @@
 
   <input class="w3-input w3-border w3-animate-input" type="text" style="width:50%"
            [formControl]="lastname"
-           placeholder="Nachname">
+           placeholder="Last Name">
     <span class="error" *ngIf="lastname.touched && lastname.dirty && lastname.errors">
       <span *ngIf="lastname.errors?.required">Bitte Nachname eintrage</span>
       <span *ngIf="lastname.errors?.minlength">Es müssen min. 2 Zeichen eingegeben sein</span>
@@ -22,7 +22,7 @@
 
 <input class="w3-input w3-border w3-animate-input" type="number" style="width:30%"
            [formControl]="age" [min]="1" [max]="100"
-           placeholder="Alter">
+           placeholder="Age">
     <span class="error" *ngIf="age.touched && age.dirty && age.errors">
       <span *ngIf="age.errors?.required">Bitte Vornamen eintrage</span>
       <span *ngIf="age.errors?.min||age.errors?.max">Bitte nur einen Wert zwischen 1 und 100</span>
