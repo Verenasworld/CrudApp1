@@ -3,7 +3,7 @@
 
 
 <div class="home-content">
-
+  <button class="button-hover" (click)="openModal()">open modal a</button>
   <h1>CRUD APP with HTTP-CLIENT </h1>
   <a class="grow" href="https://www.linkedin.com/learning/angular-crud-anwendungen-mit-dem-http-client/willkommen-zu-dem-video-training-angular-crud-anwendungen-mit-dem-http-client">TUTORIAL>> </a>
   <p>
@@ -14,12 +14,16 @@
     <br>-Implement the CRUD process
     <br>-Handle errors in the client-server communication
     <br> - Intercept requests and responses </p>
+
+  <h3>In addition to learning Http -client,<br>
+    I redesigned the app to practice scss</h3>
+   <p>Display:flex | Transition&Transform | &:Hover</p>
 </div>
 
 
 <button *ngIf="!cookieAccepted" (click)="acceptCookie()">accept cookie</button>
 
-<button class="button-hover" (click)="openModal()">open modal a</button>
+
 
 <!--
 <a [routerLink]="[ { outlets: { modal: ['modalA'] } } ]">open Modal</a>

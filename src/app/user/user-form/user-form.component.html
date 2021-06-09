@@ -29,7 +29,15 @@
     </span>
     <br>
 
-    <input type="hidden" [formControl]="id">
+  <input class="w3-input w3-border w3-animate-input" type="email" style="width:30%" placeholder="test@test.com"
+         [formControl]="email" [min]="1" [max]="100"
+         >
+
+  <span class="error" *ngIf="email.touched && email.dirty && email.errors">
+      <span *ngIf="email.errors?.required">Bitte email adresse eintragen </span>
+
+    </span>
+  <br>
 <div class="buttons">
 
   <button type="reset"

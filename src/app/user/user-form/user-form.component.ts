@@ -19,6 +19,7 @@ export class UserFormComponent implements OnInit, OnDestroy {
   lastname: AbstractControl;
   age: AbstractControl;
   id: AbstractControl;
+  email: AbstractControl;
 
   private user: User;
   private sub: Subscription;
@@ -65,18 +66,22 @@ export class UserFormComponent implements OnInit, OnDestroy {
                      Validators.max ( 100 )
                    ]
       ],
-      id       : [ this.user.id ]
+      email       : [ this.user.email,
+            [ Validators.required ]
+      ]
     } );
     this.firstname = this.myForm.get ( [ 'firstname' ] );
     this.lastname  = this.myForm.get ( [ 'lastname' ] );
     this.age       = this.myForm.get ( [ 'age' ] );
-    this.id        = this.myForm.get ( [ 'id' ] );
+    this.email       = this.myForm.get ( [ 'email' ] );
+
   }
 
   sendForm() {
     if ( !this.user.id ) {
       this.$user.create ( this.myForm.value )
           .subscribe ( succ => this.app.closeModal () );
+      this.router.navigate(['/user']);
     } else {
       this.$user.update( this.myForm.value )
           .subscribe ( succ => this.app.closeModal () );
