@@ -81,7 +81,7 @@ export class UserFormComponent implements OnInit, OnDestroy {
     if ( !this.user.id ) {
       this.$user.create ( this.myForm.value )
           .subscribe ( succ => this.app.closeModal () );
-      this.router.navigate(['/user']);
+      this.router.navigate(['./user']);
     } else {
       this.$user.update( this.myForm.value )
           .subscribe ( succ => this.app.closeModal () );
